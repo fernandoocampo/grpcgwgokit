@@ -1,0 +1,10 @@
+syntax = "proto3";
+package grpcgwgokit;
+option go_package = "pkg/proto/grpcgwgokit/pb";
+message StringMessage {
+  string value = 1;
+}
+
+service YourService {
+  rpc Echo(StringMessage) returns (StringMessage) {}
+}
